@@ -20,7 +20,7 @@ class FileSave {
     }
 
     public function save($dir){
-        $content = "text";
+        $content = "text " . rand(0,100) . PHP_EOL;
         if(file_exists($dir . '/' . $this->filePath)){
             $content = file_get_contents($dir . '/' . $this->filePath) . $content;
         }
