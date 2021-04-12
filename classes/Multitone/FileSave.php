@@ -5,7 +5,7 @@ namespace Multitone;
 class FileSave {
     private $filePath;
 
-    private static $_instance = [];
+    private static $_instances = [];
 
     private function __construct($str)
     {
@@ -13,10 +13,10 @@ class FileSave {
     }
 
     public static function getInstance($str): FileSave {
-        if(!isset(self::$_instance[$str])){
-            self::$_instance[$str] = new Static($str);
+        if(!isset(self::$_instances[$str])){
+            self::$_instances[$str] = new Static($str);
         }
-        return self::$_instance[$str];
+        return self::$_instances[$str];
     }
 
     public function save($dir){
@@ -25,6 +25,12 @@ class FileSave {
             $content = file_get_contents($dir . '/' . $this->filePath) . $content;
         }
         file_put_contents($dir . '/' . $this->filePath, $content);
+    }
+
+    public static function removeInstance($instanceName){
+        if(array_key_exists($instanceName, static::$_instances)){
+            unset(static::$_instances[$instanceName]);
+        }
     }
 
     private function __clone(){
