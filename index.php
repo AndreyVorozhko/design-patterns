@@ -1,18 +1,10 @@
 <?php
 
-use Multitone\FileSave;
+use StaticFabric\StaticFactory;
 
 require "functions.php";
 spl_autoload_register('project_autoload');
 
-$file = FileSave::getInstance('user-log');
-$file->save(__DIR__);
+$obj = StaticFactory::create('\StaticFabric\FactoryClass');
 
-$file = FileSave::getInstance('system-log');
-$file->save(__DIR__);
-
-$file = FileSave::getInstance('user-log');
-$file->save(__DIR__);
-
-$file = FileSave::getInstance('system-log');
-$file->save(__DIR__);
+$obj->save();
