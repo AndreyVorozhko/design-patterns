@@ -4,8 +4,7 @@ use AbstractFactory\DatabaseFactory;
 use AbstractFactory\MysqlDatabaseFactory;
 use AbstractFactory\SqliteDatabaseFactory;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 function queryExecute(Databasefactory $factory){
     $obj = $factory->query();

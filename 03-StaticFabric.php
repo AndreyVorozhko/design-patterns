@@ -2,8 +2,7 @@
 
 use StaticFabric\StaticFactory;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 $obj = StaticFactory::create('\StaticFabric\FactoryClass');
 

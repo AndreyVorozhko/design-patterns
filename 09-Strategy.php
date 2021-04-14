@@ -5,8 +5,7 @@ use Strategy\imagesSave;
 use Strategy\BaseLogic;
 use Strategy\IFileSave;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 // Using abstract class BaseLogic
 

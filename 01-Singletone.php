@@ -2,8 +2,7 @@
 
 use Singletone\FileSave;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 $file = FileSave::getInstance();
 $file->save(__DIR__);

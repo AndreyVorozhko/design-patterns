@@ -5,8 +5,7 @@ use Observer\SendMailPlugin;
 use Observer\ChangeTextPlugin;
 use Observer\ChangeTitlePlugin;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 // Create our blog
 $blog = new Blog();

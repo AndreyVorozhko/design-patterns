@@ -2,8 +2,7 @@
 
 use Multitone\FileSave;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 $file = FileSave::getInstance('user-log');
 $file->save(__DIR__);

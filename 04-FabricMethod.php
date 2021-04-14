@@ -3,8 +3,7 @@
 use FabricMethod\FileSaveFactory;
 use FabricMethod\MysqlSaveFactory;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 $factory = new FileSaveFactory('testFile.txt');
 $factory->createSaver()->save("Hello, world!");

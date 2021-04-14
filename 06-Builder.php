@@ -3,8 +3,7 @@
 use Builder\SQLQueryBuilder;
 use Builder\MysqlQueryBuilder;
 
-require "functions.php";
-spl_autoload_register('project_autoload');
+require "index.php";
 
 function queryExecute(SQLQueryBuilder $builder){
     $query = $builder->
